@@ -1,0 +1,37 @@
+
+.iframe-body iframe {
+    width: 60vw;
+    height: 80vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+
+#iframes {
+    width: 100%;
+}
+
+#iframes-inner {
+    width: 100%;
+}
+
+.iframe-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .iframe-body iframe {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .iframe-body iframe {
+        width: 75vw;
+    }
+}
