@@ -7,6 +7,18 @@
       href="https://fonts.googleapis.com/css?family=Jost"
     >
   </head>
+    <script>
+    document.querySelectorAll('#nav .page').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').replace('#', '');
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+        }
+      });
+    });
+  </script>
     <body id="page-main">
     <div id="header">
     <div id="nav">
