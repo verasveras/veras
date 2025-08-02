@@ -1,33 +1,40 @@
-<!DOCTYPE html> <link rel="stylesheet" href="./index.css" />
-<html>
+<!DOCTYPE html>
   <head>
     <title>Lisa Veras</title>
+    <link rel="stylesheet" href="./layout.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Jost"
-    />
+    >
   </head>
-  <body>
-    <div class="flag">
-      <div class="triangles">
-        <div class="triangle black tri-5"></div>
-        <div class="triangle brown tri-4"></div>
-        <div class="triangle light-blue tri-3"></div>
-        <div class="triangle pink tri-2"></div>
-        <div class="triangle wh1te tri-1"></div>
-      </div>
-      <div class="row red"></div>
-      <div class="row orange"></div>
-      <div class="row yellow"></div>
-      <div class="row green"></div>
-      <div class="row blue"></div>
-      <div class="row purple"></div>
+    <script>
+    document.querySelectorAll('#nav .page').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').replace('#', '');
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+        }
+      });
+    });
+  </script>
+    <body id="page-main">
+    <div id="header">
+    <div id="nav">
+      <a href="#page-5" class="page">GUITAR LOG</a> / <a href="#page-4" class="page">ABOUT</a>	</div> <!-- #nav -->
     </div>
-    <div>
-      <div class="about">
-        <h1>I'm Lisa. I'm a software engineer.</h1>
-        <p>My pronouns are they/them.</p>
+    <div id="body">
+      <div id="iframes">
+        <div id="iframes-inner">
+          <div class="iframe-body docs" id="page-5">
+            <iframe src="https://docs.google.com/document/d/18UU9JrB4s5qRJYkqCg4dNR3yvH4G2Sc1x6Qjgxk3q9w/edit?usp=sharing" data-src="https://docs.google.com/document/d/18UU9JrB4s5qRJYkqCg4dNR3yvH4G2Sc1x6Qjgxk3q9w/edit?usp=sharing"></iframe>
+          </div>
+              <div class="iframe-body docs" id="page-4">
+            <iframe src="https://docs.google.com/document/d/11xF1vhbc9iXL9fywtuk-lIf23MJImv_URNzxQKbQTWI/edit?usp=sharing" data-src="https://docs.google.com/document/d/11xF1vhbc9iXL9fywtuk-lIf23MJImv_URNzxQKbQTWI/edit?usp=sharing"></iframe>
+          </div>
+            </div>
       </div>
     </div>
-  </body>
+    </body>
 </html>

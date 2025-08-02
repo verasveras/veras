@@ -1,0 +1,48 @@
+
+#nav {
+    padding: 10px;
+    font-size: 28px;
+}
+
+.iframe-body iframe {
+    width: 60vw;
+    height: 80vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+
+#iframes {
+  overflow-x: auto;
+  width: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+#iframes-inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.iframe-body {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+
+
+@media (max-width: 768px) {
+    .iframe-body iframe {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .iframe-body iframe {
+        width: 75vw;
+    }
+}
