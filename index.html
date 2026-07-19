@@ -14,27 +14,28 @@
         const targetId = this.getAttribute('href').replace('#', '');
         const target = document.getElementById(targetId);
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+          target.scrollIntoView({ behavior: 'smooth' });
         }
       });
     });
   </script>
     <body id="page-main">
-    <div id="header">
-    <div id="nav">
-      <a href="#page-5" class="page">GUITAR LOG</a> / <a href="#page-4" class="page">ABOUT</a>	</div> <!-- #nav -->
-    </div>
+    <nav>
+      <a href="#log" class="page">GUITAR LOG</a> / <a href="#about" class="page">ABOUT</a>	</div> <!-- #nav -->
+    </nav>
+    <main>
     <div id="body">
       <div id="iframes">
         <div id="iframes-inner">
-          <div class="iframe-body docs" id="page-5">
+          <div class="iframe-body" id="log">
             <iframe src="https://docs.google.com/document/d/18UU9JrB4s5qRJYkqCg4dNR3yvH4G2Sc1x6Qjgxk3q9w/edit?usp=sharing" data-src="https://docs.google.com/document/d/18UU9JrB4s5qRJYkqCg4dNR3yvH4G2Sc1x6Qjgxk3q9w/edit?usp=sharing"></iframe>
           </div>
-              <div class="iframe-body docs" id="page-4">
+              <div class="iframe-body" id="about">
             <iframe src="https://docs.google.com/document/d/11xF1vhbc9iXL9fywtuk-lIf23MJImv_URNzxQKbQTWI/edit?usp=sharing" data-src="https://docs.google.com/document/d/11xF1vhbc9iXL9fywtuk-lIf23MJImv_URNzxQKbQTWI/edit?usp=sharing"></iframe>
           </div>
             </div>
       </div>
     </div>
+    </main>
     </body>
 </html>
